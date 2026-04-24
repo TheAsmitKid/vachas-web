@@ -13,7 +13,6 @@ const LASTFM_TIPS = [
     "Tip: the Last.fm minimum listen time is customizable in Settings."
 ];
 
-
 let currentController = null;
 let searchHasResults = false;
 let currentVideo = null;
@@ -1378,6 +1377,7 @@ window.onYouTubeIframeAPIReady = function () {
 
     player = new YT.Player("player", {
         videoId: selectedVideoId,
+        //host: "http://www.youtube-nocookie.com", used only if useNoCookieInput is on.. its a copy of lastfmPermanentDisableInput
         playerVars: {
             autoplay: 0,
             controls: 0,
