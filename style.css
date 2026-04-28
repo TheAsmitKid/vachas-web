@@ -78,19 +78,11 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: var(--bg-2);
+    background: var(--bg-1);
     color: var(--text-0);
-    text-align: center;
-    opacity: 0;
-    transition: opacity var(--transition-panel);
 }
 
 .app {
@@ -100,6 +92,7 @@ body {
 }
 
 .left,
+.middle,
 .right {
     display: flex;
     flex-direction: column;
@@ -108,20 +101,16 @@ body {
 
 .left {
     width: 20%;
-    min-width: 220px;
-    background: var(--bg-1);
     border-right: 1px solid var(--border-1);
-}
-
-.right {
-    width: 40%;
-    min-width: 320px;
-    border-left: 1px solid var(--border-1);
 }
 
 .middle {
     width: 40%;
-    min-height: 0;
+}
+
+.right {
+    width: 40%;
+    border-left: 1px solid var(--border-1);
 }
 
 #playbackControl,
@@ -321,7 +310,7 @@ body {
 }
 
 .playlist-list,
-.middle,
+#playlistView,
 #results {
     flex: 1;
     min-height: 0;
@@ -427,7 +416,7 @@ body {
 
 .settings-actions-btn {
     width: 50%;
-    background: var(--bg-11);
+    background: var(--bg-6);
 }
 
 .delete-playlist-btn:hover,
@@ -554,29 +543,32 @@ body {
     top: 0;
     z-index: 10;
     display: flex;
-    padding: 10px;
+    padding: 0;
     background: var(--bg-6);
 }
 
 .search-header input {
     flex: 1;
     width: auto;
+    height: 64px;
     padding: 10px;
     border: none;
     outline: none;
     border-radius: 8px 0 0 8px;
-    background: var(--bg-2);
+    background: var(--bg-6);
     color: var(--text-0);
     font-size: 16px;
 }
 
 .search-header button {
     padding: 10px 14px;
+    width: 64px;
     border: none;
-    background: var(--bg-2);
+    background: var(--bg-6);
     color: var(--text-3);
     cursor: pointer;
     font-size: 16px;
+    aspect-ratio: 1 / 1;
 }
 
 .search-header button:hover {
@@ -983,7 +975,7 @@ body {
     }
 
     .search-box,
-    .middle,
+    #playlistView,
     .lyrics-box,
     .lastfm-box,
     .mobile-tabs {
@@ -1000,6 +992,9 @@ body {
         border-bottom: 0;
     }
 
+    .middle {
+        order: 5;
+    }
     .mobile-tabs {
         order: 2;
         display: flex;
@@ -1103,8 +1098,8 @@ body {
     }
 
 
-    .middle {
-        order: 5;
+    #playlistView {
+        order
         display: flex;
         flex-direction: column;
         gap: 8px;

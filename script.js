@@ -2459,7 +2459,6 @@ function handleLastFmProgress(currentTime, duration) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.body.style.opacity = "1";
     const db = getDB();
     const state = db && typeof db.playerState === "object" ? db.playerState : {};
     repeatSong: !!state.repeatSong,
