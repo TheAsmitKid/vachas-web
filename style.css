@@ -35,12 +35,6 @@
     --overlay-3: rgba(0, 0, 0, 0.70);
     --overlay-4: rgba(0, 0, 0, 0.80);
 
-    --line-0: rgba(255, 255, 255, 0.12);
-    --line-1: rgba(255, 255, 255, 0.14);
-    --line-2: rgba(255, 255, 255, 0.35);
-
-    --focus-0: rgba(255, 255, 255, 0.04);
-
     --spinner-track: #444444;
     --spinner-head: #ffffff;
 
